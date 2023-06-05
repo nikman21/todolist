@@ -1,0 +1,26 @@
+<h1>To-Do-List</h1>
+<div class="center">
+    <form action="/add_task" method="post">
+        <label for="tasks">New Task Description</label>
+        <input id="tasks" type="text" name="tasks" placeholder="Enter task description" />
+        <input type="submit" />
+    </form>
+    <h2>Tasks:</h2>
+    <ul class="task-list">
+    {{#each tasks}}
+        <li class="{{#if is_complete}}completed{{/if}}">
+        {{task_desc}}
+        <form action="/complete_task" method="post">
+            <input type="hidden" name="task_id" value="{{task_id}}">
+            <input type="submit" value="Mark as Complete">
+        </form>
+        </li>
+    {{/each}}
+    </ul>
+    <form action="/remove_completed_tasks" method="post">
+        <input type="submit" value="Remove Completed Tasks">
+    </form>
+    <div class="nav-links">
+        <a href="/logout">Logout</a>
+    </div>
+</div>

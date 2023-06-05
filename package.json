@@ -1,0 +1,25 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "Create simple to do list with server authetication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r esm index.js"
+  },
+  "author": "Nikolas Manuel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
